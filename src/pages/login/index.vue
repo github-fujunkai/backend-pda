@@ -1,7 +1,7 @@
 <template>
 
 	<view class="login">
-		<h6 class="title">后道追溯</h6>
+		<h6 class="title"></h6>
 		<uni-forms ref="form" :modelValue="formData" :rules="rules">
 			<uni-forms-item label="" name="username">
 				<uni-easyinput prefixIcon="person" type="text" v-model="formData.username" placeholder="请输入账号" />
@@ -10,7 +10,7 @@
 				<uni-easyinput prefixIcon="eye" type="password" v-model="formData.password" placeholder="请输入密码" />
 			</uni-forms-item>
 		</uni-forms>
-		<button @click="submitForm" type="primary">登录</button>
+		<button @click="submitForm" type="primary" size="mini" style="width: 100%;">登录</button>
 		
 		<div class="link" @click="goLink">连接设置</div>
 	</view>

@@ -27,11 +27,11 @@
 		menuList: [{
 			name: "防错",
 			imgurl: "/static/image/icon_purchase.png",
-			router: "../consumables/line"
+			router: "../consumables/poka-yoke"
 		}, {
 			name: "DIP",
 			imgurl: "/static/image/icon_requisition.png",
-			router: ""
+			router: "../consumables/dip"
 		}
 		],
 		userName:uni.getStorageSync('user')?.name || ''

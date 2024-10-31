@@ -15,33 +15,34 @@
 		{
 			"path": "pages/menu/index",
 			"style": {
-				"navigationBarTitleText": "菜单"
+				"navigationBarTitleText": "功能选择"
 			}
 		},
 		{
-			"path": "pages/consumables/line",
+			"path": "pages/consumables/poka-yoke",
 			"style": {
-				"navigationBarTitleText": "产线选择"
+				"navigationBarTitleText": "防错"
 			}
 		},
 		{
-			"path": "pages/consumables/index",
-			"style": {
-				"navigationBarTitleText": "易耗品更换"
-			}
-		},
-		{
-			"path" : "pages/consumables/abnormal",
+			"path" : "pages/consumables/dip",
 			"style" : 
 			{
-				"navigationBarTitleText" : "更换"
+				"navigationBarTitleText" : "DIP"
+			}
+		},
+		{
+			"path" : "pages/consumables/package",
+			"style" : 
+			{
+				"navigationBarTitleText" : "包装"
 			}
 		},
 		{
 			"path" : "pages/login/dip-setup",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "DIP设置"
 			}
 		}
 	],

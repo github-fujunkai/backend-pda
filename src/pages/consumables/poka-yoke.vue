@@ -1,8 +1,6 @@
 <template>
 	<view class="content">
-		<view class="box" v-for="(item,index) in lineList" @click="goItem(item)">
-			<button>{{item.lineName}}</button>
-		</view>
+		
 	</view>
 </template>
 

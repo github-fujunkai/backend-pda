@@ -142,7 +142,7 @@ export function uaeslogin1(query) {
 				"mail": "XIAOXIONG.YAO@AMPHENOLMCP.COM",
 				"username": "HYZD0372",
 				"password": "E10ADC3949BA59ABBE56E057F20F883E",
-				"name": "姚小雄",
+				"name": "工程师",
 				"positionId": "87dfbd59-df9f-4816-8bdf-afd833f5d2dc",
 				"workshopId": "3e4eb480-f52c-495b-84c2-422b1a65c2fd",
 				"lineId": "75b06637-de92-4232-8054-b38056b4d250,41a...",

@@ -14,7 +14,7 @@
 				<button size="mini" @click="submitForm">防错</button>
 			</uni-col>
 			<uni-col :span="12">
-				<button style="float: right;" size="mini" @click="submitForm">DIP</button>
+				<button style="float: right;" size="mini" @click="goDIP">DIP</button>
 			</uni-col>
 		</uni-row>
 	</view>
@@ -62,6 +62,12 @@
 			},500)
 		}).catch(err => {
 			
+		})
+	}
+	
+	const goDIP = () => {
+		uni.navigateTo({
+			url: "./dip-setup"
 		})
 	}
 </script>
