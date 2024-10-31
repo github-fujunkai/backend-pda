@@ -1,9 +1,8 @@
 import { setStorageSync,getStorageSync } from "@dcloudio/uni-h5"
 
-//测试：http://172.16.8.9:8080  正式：
 let BASE_URL = ''
 if(!uni.getStorageSync('BASE_URL')){
-	BASE_URL = 'http://172.16.8.9:8080'
+	BASE_URL = 'https://82tc385147.goho.co'
 	uni.setStorageSync('BASE_URL',BASE_URL)
 }else{
 	BASE_URL = uni.getStorageSync('BASE_URL')
@@ -29,6 +28,7 @@ export const request = (options) => {
 			// 		`Bearer ${uni.getStorageSync('token')}` : '',
 			// 	Client: 'APP'
 			// },
+			header: options.header,
 			data: options.data || {},
 			success: res => {
 				uni.hideLoading();

@@ -40,8 +40,11 @@ import {
 
 export function uaeslogin(query) {
 	return request({
-		url: "/andon/pda/login",
-		method: "get",
+		url: "/iot-manager/auth/login",
+		method: "post",
+		header: {
+		        'Content-Type': 'application/x-www-form-urlencoded' // 设置请求头为表单提交类型
+		    },
 		data: query,
 	});
 }

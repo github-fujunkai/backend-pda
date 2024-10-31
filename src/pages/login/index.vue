@@ -38,8 +38,8 @@
 	} from "@dcloudio/uni-app"
 	const state = reactive({
 		formData: {
-			username:"",
-			password:""
+			username:"fujunkai",
+			password:"123456"
 		},
 		rules: {
 			username: {
@@ -79,43 +79,45 @@
 	const form = ref(null);
 	const submitForm = () => {
 		form.value.validate().then(ress => {
-			// uaeslogin(formData.value).then(res => {
-			// 	if(res.success){
-			// 		uni.setStorageSync('lineList',res?.data?.lineList || [])
-			// 		uni.setStorageSync('user',res?.data?.user || '')
-			// 		uni.redirectTo({
-			// 			url: "../menu/index"
-			// 		})
-			// 		uni.showToast({
-			// 			icon: 'success',//success error none
-			// 			title: res.msg
-			// 		})
-			// 	}else{
-			// 		uni.showToast({
-			// 			icon: 'error',//success error none
-			// 			title: res.msg
-			// 		})
-			// 	}
-				
-			// })
-			//注释
-			let res = uaeslogin1();
-			uni.setStorageSync('lineList',res?.data?.lineList || [])
-			uni.setStorageSync('user',res?.data?.user || '')
-			uni.redirectTo({
-				url: "../menu/index"
-			})
-			uni.showModal({
-				title: '提示',
-				content: uni.getStorageSync('BASE_URL'),
-				success: function (res) {
-					if (res.confirm) {
-						console.log('用户点击确定');
-					} else if (res.cancel) {
-						console.log('用户点击取消');
-					}
+			uaeslogin({
+				...formData.value,
+				scope:'DIP'
+			}).then(res => {
+				if(res.respCode == 200){
+					uni.setStorageSync('user',res?.bizData || '')
+					uni.redirectTo({
+						url: "../menu/index"
+					})
+					uni.showToast({
+						icon: 'success',//success error none
+						title: res.msg
+					})
+				}else{
+					uni.showToast({
+						icon: 'error',//success error none
+						title: res.msg
+					})
 				}
-			});
+				
+			})
+			//注释
+			// let res = uaeslogin1();
+			// uni.setStorageSync('lineList',res?.data?.lineList || [])
+			// uni.setStorageSync('user',res?.data?.user || '')
+			// uni.redirectTo({
+			// 	url: "../menu/index"
+			// })
+			// uni.showModal({
+			// 	title: '提示',
+			// 	content: uni.getStorageSync('BASE_URL'),
+			// 	success: function (res) {
+			// 		if (res.confirm) {
+			// 			console.log('用户点击确定');
+			// 		} else if (res.cancel) {
+			// 			console.log('用户点击取消');
+			// 		}
+			// 	}
+			// });
 		}).catch(err => {
 			
 		})
