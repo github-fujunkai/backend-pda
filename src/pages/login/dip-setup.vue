@@ -1,14 +1,14 @@
 <template>
 	<view class="container">
 		<uni-forms ref="form" :modelValue="formData" :rules="rules">
-			<uni-forms-item label="工位" name="name" labelWidth="160rpx">
-				<uni-easyinput prefixIcon="scan" type="text" v-model="formData.operationType" placeholder="请输入工位" />
+			<uni-forms-item label="工位" name="workstation" labelWidth="160rpx">
+				<uni-easyinput prefixIcon="scan" type="text" v-model="formData.workstation" placeholder="请输入工位" />
 			</uni-forms-item>
-			<uni-forms-item label="OK提示音:" name="operationType" labelWidth="160rpx">
-				<uni-data-select v-model="formData.operationType" :localdata="dictList"></uni-data-select>
+			<uni-forms-item label="OK提示音:" name="okSound" labelWidth="160rpx">
+				<uni-data-select v-model="formData.okSound" :localdata="dictList"></uni-data-select>
 			</uni-forms-item>
-			<uni-forms-item label="NG提示音:" name="operationType" labelWidth="160rpx">
-				<uni-data-select v-model="formData.operationType" :localdata="dictList"></uni-data-select>
+			<uni-forms-item label="NG提示音:" name="ngSound" labelWidth="160rpx">
+				<uni-data-select v-model="formData.ngSound" :localdata="dictList"></uni-data-select>
 			</uni-forms-item>
 			<uni-section title="输入设置" type="line">
 				<uni-row>
@@ -53,35 +53,35 @@
 					<uni-col :span="6" class="center mb-5">波特率</uni-col>
 					<uni-col :span="6" class="center mb-5">校验位</uni-col>
 					<uni-col :span="6" class="mb-5">
-						<uni-data-select size="mini" v-model="formData.operationType"
+						<uni-data-select size="mini" v-model="formData.sequenceNumber"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
 					<uni-col :span="6" class="mb-5">
-						<uni-data-select size="mini" v-model="formData.operationType"
+						<uni-data-select size="mini" v-model="formData.serialNumber"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
 					<uni-col :span="6" class="mb-5">
-						<uni-data-select size="mini" v-model="formData.operationType"
+						<uni-data-select size="mini" v-model="formData.baudRate"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
 					<uni-col :span="6" class="mb-5">
-						<uni-data-select size="mini" v-model="formData.operationType"
+						<uni-data-select size="mini" v-model="formData.checkBit"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
 					<uni-col :span="6" class="mb-5">
-						<uni-data-select size="mini" v-model="formData.operationType"
+						<uni-data-select size="mini" v-model="formData.sequenceNumber"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
-					<uni-col :span="6">
-						<uni-data-select size="mini" v-model="formData.operationType"
+					<uni-col :span="6" class="mb-5">
+						<uni-data-select size="mini" v-model="formData.serialNumber"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
-					<uni-col :span="6">
-						<uni-data-select size="mini" v-model="formData.operationType"
+					<uni-col :span="6" class="mb-5">
+						<uni-data-select size="mini" v-model="formData.baudRate"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
-					<uni-col :span="6">
-						<uni-data-select size="mini" v-model="formData.operationType"
+					<uni-col :span="6" class="mb-5">
+						<uni-data-select size="mini" v-model="formData.checkBit"
 							:localdata="dictList"></uni-data-select>
 					</uni-col>
 				</uni-row>

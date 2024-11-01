@@ -51,6 +51,7 @@
 		// console.log(uni.getStorageSync('BASE_URL'))
 		form.value.validate().then(res => {
 			uni.setStorageSync('BASE_URL',formData.value.name)
+			uni.setStorageSync('BASE_PORT',formData.value.port)
 			// console.log(uni.getStorageSync('BASE_URL'))
 			uni.showToast({
 				icon: 'success',//success error none
